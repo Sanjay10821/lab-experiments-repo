@@ -559,7 +559,7 @@ public class MyServlet extends HttpServlet {
   {
     id: 'exp5(b)',
     title: 'Exp 5(b):',
-    image:`/exp5(b)`,
+    image:`/exp5(b).png`,
     code: `Command:
 
 javac -cp "C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\servlet-api.jar" -d WEB-INF\classes MyServlet.java
@@ -716,7 +716,7 @@ web.xml
   {
     id: 'exp6(a)',
     title: 'Exp 6(a):',
-    image:`/exp6(a)`,
+    image:`/exp6(a).png`,
     code: `Command:
 
 javac -cp "C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\servlet-api.jar" -d WEB-INF\classes MyServlet.java
@@ -948,7 +948,7 @@ SELECT * FROM questions;`
   {
     id: 'exp6(b)',
     title: 'Exp 6(b):',
-    image:`/exp6(b)`,
+    image:`/exp6(b).png`,
     code: `Command:
 
 javac -cp "C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\servlet-api.jar" -d WEB-INF\classes MyServlet.java
@@ -1274,6 +1274,212 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   {
     id: 'exp8',
     title: 'Exp 8:',
-    code: ``
+    image:`exp8.png`,
+    code: `StudentCRUDServlet.java
+
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import java.sql.*;
+
+public class StudentCRUDServlet extends HttpServlet {
+
+    Connection con;
+
+    // Initialize database connection
+    public void init() throws ServletException {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/college?useSSL=false&serverTimezone=UTC",
+                "root",
+                "Keerthana"
+            );
+
+            System.out.println("DB Connected");
+
+        } catch (Exception e) {
+            System.out.println("DB ERROR:");
+            e.printStackTrace();
+        }
+    }
+
+    // Handle GET (to avoid 405 error)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doPost(request, response);
+    }
+
+    // Handle POST request
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        out.println("<html><body>");
+        out.println("<h2>Student Management Result</h2>");
+
+        String action = request.getParameter("action");
+
+        try {
+
+            if (con == null) {
+                out.println("<h3>Database not connected!</h3>");
+                return;
+            }
+
+            // INSERT
+            if ("insert".equals(action)) {
+                int id = Integer.parseInt(request.getParameter("id"));
+                String name = request.getParameter("name");
+                String dept = request.getParameter("dept");
+
+                PreparedStatement ps = con.prepareStatement(
+                        "INSERT INTO student (id, name, dept) VALUES (?, ?, ?)"
+                );
+
+                ps.setInt(1, id);
+                ps.setString(2, name);
+                ps.setString(3, dept);
+
+                int rows = ps.executeUpdate();
+
+                if (rows > 0)
+                    out.println("<h3>Student Record Inserted Successfully</h3>");
+
+                ps.close();
+            }
+
+            // UPDATE
+            else if ("update".equals(action)) {
+                int id = Integer.parseInt(request.getParameter("id"));
+                String name = request.getParameter("name");
+                String dept = request.getParameter("dept");
+
+                PreparedStatement ps = con.prepareStatement(
+                        "UPDATE student SET name=?, dept=? WHERE id=?"
+                );
+
+                ps.setString(1, name);
+                ps.setString(2, dept);
+                ps.setInt(3, id);
+
+                int rows = ps.executeUpdate();
+
+                if (rows > 0)
+                    out.println("<h3>Student Record Updated Successfully</h3>");
+                else
+                    out.println("<h3>No Record Found</h3>");
+
+                ps.close();
+            }
+
+            // DELETE
+            else if ("delete".equals(action)) {
+                int id = Integer.parseInt(request.getParameter("id"));
+
+                PreparedStatement ps = con.prepareStatement(
+                        "DELETE FROM student WHERE id=?"
+                );
+
+                ps.setInt(1, id);
+
+                int rows = ps.executeUpdate();
+
+                if (rows > 0)
+                    out.println("<h3>Student Record Deleted Successfully</h3>");
+                else
+                    out.println("<h3>No Record Found</h3>");
+
+                ps.close();
+            }
+
+            // VIEW
+            else if ("view".equals(action)) {
+
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM student");
+
+                out.println("<h3>Student Records</h3>");
+                out.println("<table border='1'>");
+                out.println("<tr><th>ID</th><th>Name</th><th>Dept</th></tr>");
+
+                boolean hasData = false;
+
+                while (rs.next()) {
+                    hasData = true;
+                    out.println("<tr>");
+                    out.println("<td>" + rs.getInt("id") + "</td>");
+                    out.println("<td>" + rs.getString("name") + "</td>");
+                    out.println("<td>" + rs.getString("dept") + "</td>");
+                    out.println("</tr>");
+                }
+
+                out.println("</table>");
+
+                if (!hasData) {
+                    out.println("<h3>No Records Found</h3>");
+                }
+
+                rs.close();
+                st.close();
+            }
+
+        } catch (Exception e) {
+            out.println("<h3>Error: " + e.getMessage() + "</h3>");
+            e.printStackTrace();
+        }
+
+        out.println("<br><a href='index.html'>Go Back</a>");
+        out.println("</body></html>");
+    }
+
+    // Close connection
+    public void destroy() {
+        try {
+            if (con != null)
+                con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+index.html
+
+<html lang="en">
+<head>
+<title>Student CRUD</title>
+</head>
+<body>
+<h2>Student Management System</h2>
+
+<form action="StudentCRUDServlet" method="post">
+    ID: <input type="text" name="id"><br>
+    Name: <input type="text" name="name"><br>
+    Dept: <input type="text" name="dept"><br>
+
+    <button name="action" value="insert">Insert</button>
+    <button name="action" value="update">Update</button>
+    <button name="action" value="delete">Delete</button>
+    <button name="action" value="view">View</button>
+</form>
+
+</body>
+</html>
+
+web.xml:
+<web-app>
+<servlet>
+<servlet-name>StudentCRUDServlet</servlet-name>
+<servlet-class>StudentCRUDServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>StudentCRUDServlet</servlet-name>
+<url-pattern>/StudentCRUDServlet</url-pattern>
+</servlet-mapping>
+</web-app>`
   },
 ];
