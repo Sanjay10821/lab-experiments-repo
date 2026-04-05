@@ -65,7 +65,7 @@ export default function ExperimentBlock({ title, code }) {
           onClick={handleCopy} 
           className={\`copy-btn \${copied ? 'copied' : ''}\`}
         >
-          {copied ? '✅ Copied!' : '📋 Copy Code'}
+          {copied ? '✅ Copied!' : ' Copy Code'}
         </button>
       </div>
       <div className="code-container">
@@ -85,10 +85,6 @@ import './index.css';
 export default function App() {
   return (
     <div className="container">
-      <header className="app-header">
-        <h1>Lab Experiments Repo</h1>
-        <p>Instant copy-paste snippets for practicals.</p>
-      </header>
 
       <main className="experiments-list">
         {experimentsData.map((exp) => (
@@ -109,7 +105,7 @@ export default function App() {
   --card-bg: #ffffff;
   --code-bg: #282c34;
   --code-text: #abb2bf;
-  --primary-btn: #0070f3;
+  --primary-btn: #c9ddf4;
   --success-btn: #10b981;
 }
 
@@ -131,7 +127,7 @@ body {
 .card-header h2 { margin: 0; font-size: 1.25rem; }
 
 .copy-btn { background-color: var(--primary-btn); color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
-.copy-btn:hover { background-color: #005bb5; }
+.copy-btn:hover { background-color: #e7eff8; }
 .copy-btn.copied { background-color: var(--success-btn); }
 
 .code-container { background-color: var(--code-bg); padding: 20px 24px; overflow-x: auto; }
