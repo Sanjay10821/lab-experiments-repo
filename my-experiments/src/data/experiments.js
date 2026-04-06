@@ -1482,4 +1482,1182 @@ web.xml:
 </servlet-mapping>
 </web-app>`
   },
+  {
+    id: 'All',
+    title: 'All',
+      code: `Exp1
+<!DOCTYPE html>
+<html>
+<head>
+    <title>South India Map</title>
+
+    <script>
+        function showInfo(state) {
+            if (state == "karnataka") {
+                alert(
+                    "KARNATAKA\n\n" +
+                    "Capital: Bengaluru\n" +
+                    "Language: Kannada\n\n" +
+                    "Karnataka is located in the southwestern part of India. " +
+                    "It is known for its rich culture, forests, historical monuments, " +
+                    "and the IT hub Bengaluru."
+                );
+            }
+
+            if (state == "kerala") {
+                alert(
+                    "KERALA\n\n" +
+                    "Capital: Thiruvananthapuram\n" +
+                    "Language: Malayalam\n\n" +
+                    "Kerala lies along the southwestern coast of India. " +
+                    "It is famous for its backwaters, beaches, greenery, " +
+                    "and high literacy rate."
+                );
+            }
+
+            if (state == "tamilnadu") {
+                alert(
+                    "TAMIL NADU\n\n" +
+                    "Capital: Chennai\n" +
+                    "Language: Tamil\n\n" +
+                    "Tamil Nadu is located in southern India. " +
+                    "It is well known for its ancient temples, classical dance, " +
+                    "music, and rich cultural heritage."
+                );
+            }
+
+            if (state == "andhra") {
+                alert(
+                    "ANDHRA PRADESH\n\n" +
+                    "Capital: Amaravati\n" +
+                    "Language: Telugu\n\n" +
+                    "Andhra Pradesh is situated on the southeastern coast of India. " +
+                    "It has a long coastline and is known for agriculture and culture."
+                );
+            }
+
+            if (state == "telangana") {
+                alert(
+                    "TELANGANA\n\n" +
+                    "Capital: Hyderabad\n" +
+                    "Language: Telugu\n\n" +
+                    "Telangana is a state in south-central India. " +
+                    "It is known for historical forts, temples, " +
+                    "and the city of Hyderabad."
+                );
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="lightgray">
+
+<center>
+    <h1>SOUTH INDIA MAP</h1>
+    <p>Click on a state to view information</p>
+
+    <img src="world1.jpg"
+         usemap="#southindia"
+         width="720"
+         height="540"
+         border="2">
+
+    <map name="southindia">
+
+        <area shape="poly"
+              coords="241,164,247,306,286,342,323,349,350,346,347,322,358,313,376,314,383,294,368,275,345,276,324,270,327,261,343,265,335,254,325,244,321,226,332,214,339,190,349,189,349,136,349,95,327,116,316,124,297,137,281,153,264,154"
+              href="#"
+              onclick="showInfo('karnataka')"
+              alt="Karnataka">
+
+        <area shape="poly"
+              coords="253,319,329,488,337,454,336,419,322,410,316,398,312,377,303,378,297,368,303,359"
+              href="#"
+              onclick="showInfo('kerala')"
+              alt="Kerala">
+
+        <area shape="poly"
+              coords="455,299,433,364,433,414,386,457,366,467,347,500,331,493,343,448,334,411,316,385,310,358,358,340,377,324,390,307,426,294"
+              href="#"
+              onclick="showInfo('tamilnadu')"
+              alt="Tamil Nadu">
+
+        <area shape="poly"
+              coords="392,302,450,287,448,263,454,197,489,179,517,168,537,140,597,94,586,78,556,87,556,102,527,111,511,114,500,139,473,151,456,162,440,167,416,167,404,185,386,189,378,201,347,195,333,208,332,251,361,275,379,283"
+              href="#"
+              onclick="showInfo('andhra')"
+              alt="Andhra Pradesh">
+
+        <area shape="poly"
+              coords="353,190,353,138,360,132,358,111,368,66,383,63,402,54,436,62,438,85,451,91,470,107,478,120,495,134,472,143,450,152,433,169,401,184,372,197"
+              href="#"
+              onclick="showInfo('telangana')"
+              alt="Telangana">
+
+    </map>
+</center>
+
+</body>
+</html>
+
+Exp2 Resume
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume</title>
+<!-- External -->
+<link rel="stylesheet" href="style.css">
+<!-- Internal -->
+<style>
+h1{
+text-align:center;
+margin:0;
+color:#2c3e50;
+}
+h2{
+margin-top:15px;
+font-size:16px;
+color:#0b5394;
+border-bottom:2px solid #0b5394;
+}
+</style>
+</head>
+<body>
+<div class="page">
+<!-- Inline -->
+<h1 style="letter-spacing:1px;">HARISH M</h1>
+<p style="text-align:center;color:#444;">
++91 9080499263 | harishm9946@gmail.com | Linkedin
+</p>
+<h2>PROFILE</h2>
+<p>
+A young, passionate and enthusiastic student interested about emerging technologies
+and eager to contribute to impactful projects in a dynamic team environment.
+</p>
+<h2>EDUCATION</h2>
+<table>
+<tr style="background:#d9e2f3;font-weight:bold;">
+<th>Institution</th>
+<th>Course</th>
+<th>Score</th>
+<th>Year</th>
+</tr>
+<tr>
+<td>PSG Institute of Technology and Applied Research</td>
+<td>BE CSE</td>
+<td>8.82</td>
+<td>2023-27</td>
+</tr>
+<tr>
+<td>Vidhya Niketan Public School</td>
+<td>Higher Secondary</td>
+<td>97.6%</td>
+<td>2023</td>
+</tr>
+</table>
+<h2>SKILLS</h2>
+<ul>
+<li>Python</li>
+<li>C</li>
+<li>Java</li>
+<li>HTML</li>
+<li>Arduino</li>
+<li>MySQL</li>
+<li>Problem Solving</li>
+<li>Strong Communication</li>
+</ul>
+<h2>PROJECTS AND EXPERIENCES</h2>
+<p style="color:#1a7f37;"><b>EXPERIENCE</b></p>
+<ul>
+<li>CSE Association Executive Member 2024-25</li>
+<li>CSE Association Eloquence Wing Coordinator 2025-26</li>
+<li>Placement Representative for 2027 batch</li>
+<li>Master of Ceremony for college culturals</li>
+<li>Attended workshop on Redhat Linux</li>
+<li>Member of Rotaract Club 2021-Present</li>
+<li>Attended NCC Camp in School</li>
+</ul>
+<p style="color:#1a7f37;"><b>Gesture Controlled LED :</b></p>
+<ul>
+<li>Developed a touchless gesture-controlled LED system for medical applications
+using fingertip tracking.</li>
+<li>Integrated Mediapipe, Pyfirmata, and OpenCV for real-time gesture recognition
+with Arduino.</li>
+</ul>
+<h2>INTERNSHIPS</h2>
+<ul>
+<li>Intern at Gustovalley Technovations on AI,ML & Iot based Web application</li>
+<li>Intern at IIITDM Kancheepuram - Research Project on Cryptography focusing on
+Ascon Algorithm</li>
+</ul>
+<h2>RESEARCH PROJECT</h2>
+<p><b>Enhancing Fetal Distress Prediction Using TabNet XGBoost Ensemble with
+SMOTE Technique</b></p>
+<p>ICNGCS 2025 – IEEE Conference, PSG iTech (Available on IEEE Xplore)
+[Link]</p>
+<ul>
+<li>Developed a hybrid ensemble model using TabNet, XGBoost, and SMOTE to
+predict fetal distress for clinical decision support.</li>
+</ul>
+<h2>OTHER INTERESTS</h2>
+<ul>
+<li>Photography, videography and editing</li>
+<li>Footballer (State Level)</li>
+<li>Event Organisation</li>
+</ul>
+<h2>ACHIEVEMENTS</h2>
+<ul>
+<li>Won 3rd place in a Python project expo for medical tech innovation.</li>
+<li>Won second prize in Code2duo - an event conducted by Kumaraguru College ofTechnology</li>
+<li>Infosys Global Hackathon finalist</li>
+</ul>
+</div>
+</body>
+</html>
+Style.css:
+body{
+font-family: Arial, sans-serif;
+background:#e6e6e6;
+}
+.page{
+width:210mm;
+margin:20px auto;
+background:#ffffff;
+padding:20mm;
+border:2px solid #2c3e50;
+}
+table{
+width:100%;
+border-collapse: collapse;
+}
+td,th{
+padding:6px;
+border:1px solid #555;
+}
+
+
+Exp3 form validation
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form>
+Full Name:
+<input type="text" id="name"><br><br>
+User Name:
+<input type="text" id="username"><br><br>
+Email:
+<input type="text" id="email"><br><br>
+State:
+<select id="state">
+<option value="">Select</option>
+<option>Tamil Nadu</option>
+<option>Kerala</option>
+<option>Karnataka</option>
+</select><br><br>
+Address:
+<input type="text" id="address"><br><br>
+Zip Code:
+<input type="text" id="zip"><br><br>
+<button type="button" onclick="check()">Submit</button>
+</form>
+<script src="exp3.js"></script>
+</body>
+</html>
+
+Javascript code
+function check()
+{
+var name = document.getElementById("name").value;
+var username = document.getElementById("username").value;
+var email = document.getElementById("email").value;
+var state = document.getElementById("state").value;
+var address = document.getElementById("address").value;
+var zip = document.getElementById("zip").value;
+if(name=="" || username=="" || email=="" || state=="" || address=="" || zip=="")
+{
+alert("Fill all fields");
+return;
+}
+if(/\d/.test(name))
+{
+alert("Name should not contain numbers");
+return;
+}
+if(/[^a-zA-Z]/.test(username))
+{
+alert("Username only letters");
+return;
+}
+if(username.length<5 || username.length>15)
+{
+alert("Username must be 5-15 characters");
+return;
+}
+if(/[^a-zA-Z0-9]/.test(zip))
+{
+alert("Zip must be alphanumeric");
+return;
+}
+if(!email.includes("@") || !email.includes("."))
+{
+alert("Invalid email");
+return;
+}
+alert("Form submitted");
+}
+
+Exp5a invoking servlet
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+</head>
+<body>
+    <form action="MyServlet" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+Web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+  version="5.0">
+
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>MyServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/MyServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
+
+MyServlet.java
+import java.io.IOException;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/MyServlet")
+public class MyServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+
+        response.setContentType("text/html");
+        response.getWriter().println("<html><body>");
+        response.getWriter().println("<h1>Form Submitted Successfully!</h1>");
+        response.getWriter().println("<p>Welcome, " + name + "!</p>");
+        response.getWriter().println("<p>Your email is: " + email + "</p>");
+        response.getWriter().println("</body></html>");
+    }
+}
+
+Exp5b cookies
+FirstServlet.java
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class FirstServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+
+            // 1. Get the parameter from index.html
+            String n = request.getParameter("userName");
+            out.print("<html><body>");
+            out.print("<h2>Welcome " + n + "</h2>");
+
+            // 2. Create and add the cookie
+            Cookie ck = new Cookie("uname", n);
+            response.addCookie(ck);
+
+            // 3. Create the form/button to go to the second servlet
+            out.print("<br><br>");
+            out.print("<form action='servlet2' method='post'>");
+            out.print("<input type='submit' value='Go to Second Servlet'>");
+            out.print("</form>");
+            out.print("</body></html>");
+
+            out.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+SecondServlet.java
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class SecondServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+
+            // 1. Get all cookies from the request
+            Cookie[] ck = request.getCookies();
+            
+            out.print("<html><body>");
+            if (ck != null) {
+                // 2. Iterate to find our specific cookie
+                for (int i = 0; i < ck.length; i++) {
+                    if (ck[i].getName().equals("uname")) {
+                        out.print("<h2>Hello " + ck[i].getValue() + ", Welcome back!</h2>");
+                    }
+                }
+            } else {
+                out.print("<h2>No cookies found!</h2>");
+            }
+            out.print("</body></html>");
+
+            out.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+Web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+  version="5.0">
+
+    <servlet>
+        <servlet-name>s1</servlet-name>
+        <servlet-class>FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>s2</servlet-name>
+        <servlet-class>SecondServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+
+Index.html
+<!!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="servlet1" method="post">  
+Name:<input type="text" name="userName"/><br/>  
+<input type="submit" value="go"/>  
+</form>  
+</body>
+</html>
+
+Exp5c url rewriting
+FirstServlet.java
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+public class FirstServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    public FirstServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		 try{  			  
+		        response.setContentType("text/html");  
+		        PrintWriter out = response.getWriter();           
+		        String n=request.getParameter("userName");  
+		        out.print("Welcome "+n);  		  
+		        //appending the username in the query string  
+		        out.print("<a href='servlet2?uname="+n+"'>visit</a>");  		                  
+		        out.close();  
+		     }catch(Exception e){System.out.println(e);}  
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+}
+
+SecondServlet.java
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+public class SecondServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    public SecondServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		try{  		  
+	        response.setContentType("text/html");  
+	        PrintWriter out = response.getWriter();	          
+	        //getting value from the query string  
+	        String n=request.getParameter("uname");  
+	        out.print("Hello "+n); 	  
+	        out.close();  	  
+	                }catch(Exception e){System.out.println(e);}  
+	    }  
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+}
+
+Web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>url-rewriting</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>  
+<servlet-name>s1</servlet-name>  
+<servlet-class>FirstServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s1</servlet-name>  
+<url-pattern>/servlet1</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s2</servlet-name>  
+<servlet-class>SecondServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s2</servlet-name>  
+<url-pattern>/servlet2</url-pattern>  
+</servlet-mapping>  
+</web-app>
+
+Index.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="servlet1">  
+Name:<input type="text" name="userName"/><br/>  
+<input type="submit" value="go"/>  
+</form>  
+</body>
+</html>
+
+Exp5d hidden form field
+FirstServlet.java
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+public class FirstServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    public FirstServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		  try{  		  
+		        response.setContentType("text/html");  
+		        PrintWriter out = response.getWriter();  		          
+		        String n=request.getParameter("userName");  
+		        out.print("Welcome "+n);  		          
+		        //creating form that have invisible textfield  
+		        out.print("<form action='servlet2'>");  
+		        out.print("<input type='hidden' name='uname' value='"+n+"'>");  
+		        out.print("<input type='submit' value='go'>");  
+		        out.print("</form>");  
+		        out.close();  		  
+		                }catch(Exception e){System.out.println(e);}  
+		    }  
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+}
+
+SecondServlet.java
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+public class SecondServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    public SecondServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		try{  
+	        response.setContentType("text/html");  
+	        PrintWriter out = response.getWriter();  	          
+	        //Getting the value from the hidden field  
+	        String n=request.getParameter("uname");  
+	        out.print("Hello "+n);  	  
+	        out.close();  
+	                }catch(Exception e){System.out.println(e);}  
+	    }  
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
+
+Web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>hidden-fields</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+ <servlet>  
+<servlet-name>s1</servlet-name>  
+<servlet-class>FirstServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s1</servlet-name>  
+<url-pattern>/servlet1</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s2</servlet-name>  
+<servlet-class>SecondServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s2</servlet-name>  
+<url-pattern>/servlet2</url-pattern>  
+</servlet-mapping>  
+</web-app>
+
+Index.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="servlet1" method="post">  
+Name:<input type="hidden" name="userName" value="saranya"/><br/>  
+<input type="submit" value="go"/>  
+</form>  
+</body>
+</html>
+
+Exp5e http session
+FirstServlet.java
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;   
+public class FirstServlet extends HttpServlet {    
+public void doGet(HttpServletRequest request, HttpServletResponse response){  
+        try{    
+        response.setContentType("text/html");  
+        PrintWriter out = response.getWriter();            
+        String n=request.getParameter("userName");  
+        out.print("Welcome "+n);            
+        HttpSession session=request.getSession();  
+        session.setAttribute("uname",n);    
+        out.print("<a href='servlet2'>visit</a>");                    
+        out.close();    
+                }catch(Exception e){System.out.println(e);}  
+    }    
+}  
+
+SecondServlet.java
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+
+public class SecondServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+            HttpSession session = request.getSession(false);
+            String n = (String) session.getAttribute("uname");
+            out.print("Hello " + n);
+            out.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+Web.xml
+<web-app>  
+  
+<servlet>  
+<servlet-name>s1</servlet-name>  
+<servlet-class>FirstServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s1</servlet-name>  
+<url-pattern>/servlet1</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s2</servlet-name>  
+<servlet-class>SecondServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s2</servlet-name>  
+<url-pattern>/servlet2</url-pattern>  
+</servlet-mapping>  
+  
+</web-app>
+
+Index.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="servlet1">  
+Name:<input type="text" name="userName"/><br/>  
+<input type="submit" value="go"/>  
+</form>  
+</body>
+</html>
+
+Exp6a simple jsp factorial
+Index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+</head>
+<body>
+    <h1>Factorial Calculator</h1>
+    <form action="Factorial.jsp" method="get">
+        Enter a value for n: <input type="text" name="val">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+Factorial.jsp
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Factorial Result</title>
+</head>
+<body>
+<%!
+   long n, result;
+
+   long fact(long n) {
+      if (n == 0)        
+         return 1;   
+      else
+         return n * fact(n - 1);
+   }
+%>
+
+<%
+    String str = request.getParameter("val");
+    if (str != null && !str.isEmpty()) {
+        try {
+            n = Long.parseLong(str);
+            result = fact(n);
+            out.println("<b>Factorial value of " + n + ": </b> " + result);
+        } catch (NumberFormatException e) {
+            out.println("<b>Please enter a valid number.</b>");
+        }
+    } else {
+        out.println("<b>Please enter a value.</b>");
+    }
+%>
+</body>
+</html>
+
+Web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" 
+         id="WebApp_ID" version="6.0">
+
+    <display-name>Factorial</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>Factorial.jsp</welcome-file>
+    </welcome-file-list>  
+</web-app>
+
+Exp6b 
+index.jsp:
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html>
+<head><title>Student Mark List</title></head>
+<body>
+    <h2>View Student Mark List</h2>
+    <form action="DisplayMarks.jsp" method="get">
+        Enter Student ID: <input type="text" name="sid">
+        <input type="submit" value="Get Marks">
+    </form>
+</body>
+</html>
+
+DisplayMarks.jsp:
+<%@ page import="java.sql.*" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
+<head><title>Marks Result</title></head>
+<body>
+    <h3>Student Performance Details</h3>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Name</th><th>Mark 1</th><th>Mark 2</th><th>Mark 3</th><th>Total</th>
+        </tr>
+        <%
+            String sid = request.getParameter("sid");
+            try {
+                // 1. Load Driver
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                // 2. Establish Connection (Update 'password' to your MySQL password)
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/school", "root", "root");
+                
+                // 3. Create Statement
+                PreparedStatement ps = con.prepareStatement("SELECT * FROM students WHERE id = ?");
+                ps.setString(1, sid);
+                
+                // 4. Execute Query
+                ResultSet rs = ps.executeQuery();
+                
+                if (rs.next()) {
+                    %>
+                    <tr>
+                        <td><%= rs.getInt("id") %></td>
+                        <td><%= rs.getString("name") %></td>
+                        <td><%= rs.getInt("m1") %></td>
+                        <td><%= rs.getInt("m2") %></td>
+                        <td><%= rs.getInt("m3") %></td>
+                        <td><%= rs.getInt("total") %></td>
+                    </tr>
+                    <%
+                } else {
+                    out.println("<tr><td colspan='6'>No records found for ID: " + sid + "</td></tr>");
+                }
+                con.close();
+            } catch (Exception e) {
+                out.println("Error: " + e.getMessage());
+            }
+        %>
+    </table>
+    <br>
+    <a href="index.jsp">Back</a>
+</body>
+</html>
+
+web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="6.0">
+    <display-name>ThreeTierApp</display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
+
+exp7a) XML with Schema (XSD Validation)
+Student.xml:
+<?xml version="1.0"?> <!-- XML declaration -->
+<student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="student.xsd"> <!-- Link to XSD -->
+    <name>John</name> <!-- Student name -->
+    <age>20</age> <!-- Student age -->
+</student>
+
+Student.xsd:
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="student">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="name"/>
+        <xs:element type="xs:byte" name="age"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+exp7b) XML with XSLT (Display in Browser)
+Student.xml:
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+<student>
+    <name>John</name>
+    <age>20</age>
+</student>
+
+Student.xsl:
+<?xml version="1.0"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:template match="/">
+<html>
+<body>
+<h2>Student Details</h2>
+<p>
+Name: <xsl:value-of select="/student/name"/><br/>
+Age: <xsl:value-of select="/student/age"/>
+</p>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
+
+Exp8 crud
+index.html : 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+</head>
+<body>
+    <h2>Employee Management System</h2>exp
+
+    <form action="EmployeeCRUDServlet" method="post">
+        ID: <input type="text" name="id"><br><br>
+        Name: <input type="text" name="name"><br><br>
+        Salary: <input type="text" name="salary"><br><br>
+
+        <button type="submit" name="action" value="insert">Insert</button>
+        <button type="submit" name="action" value="update">Update</button>
+        <button type="submit" name="action" value="delete">Delete</button>
+        <button type="submit" name="action" value="view">View</button>
+    </form>
+</body>
+</html>
+
+EmployeeCRUDServlet.java : 
+
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import java.sql.*;
+
+public class EmployeeCRUDServlet extends HttpServlet {
+
+    Connection con;
+
+    public void init() throws ServletException {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/company",
+                "root",
+                "viswaa_gs"   // change password if needed
+            );
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        String action = request.getParameter("action");
+
+        try {
+            if (action.equals("insert")) {
+                int id = Integer.parseInt(request.getParameter("id"));
+                String name = request.getParameter("name");
+                float salary = Float.parseFloat(request.getParameter("salary"));
+
+                PreparedStatement ps = con.prepareStatement(
+                    "INSERT INTO employee VALUES (?, ?, ?)"
+                );
+                ps.setInt(1, id);
+                ps.setString(2, name);
+                ps.setFloat(3, salary);
+                ps.executeUpdate();
+
+                out.println("<h3>Inserted Successfully</h3>");
+            }
+            else if (action.equals("update")) {
+                int id = Integer.parseInt(request.getParameter("id"));
+                String name = request.getParameter("name");
+                float salary = Float.parseFloat(request.getParameter("salary"));
+
+                PreparedStatement ps = con.prepareStatement(
+                    "UPDATE employee SET name=?, salary=? WHERE id=?"
+                );
+                ps.setString(1, name);
+                ps.setFloat(2, salary);
+                ps.setInt(3, id);
+                ps.executeUpdate();
+
+                out.println("<h3>Updated Successfully</h3>");
+            }
+            else if (action.equals("delete")) {
+                int id = Integer.parseInt(request.getParameter("id"));
+
+                PreparedStatement ps = con.prepareStatement(
+                    "DELETE FROM employee WHERE id=?"
+                );
+                ps.setInt(1, id);
+                ps.executeUpdate();
+
+                out.println("<h3>Deleted Successfully</h3>");
+            }
+            else if (action.equals("view")) {
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM employee");
+
+                out.println("<h2>Employee Records</h2>");
+                out.println("<table border='1'>");
+                out.println("<tr><th>ID</th><th>Name</th><th>Salary</th></tr>");
+
+                while (rs.next()) {
+                    out.println("<tr>");
+                    out.println("<td>" + rs.getInt(1) + "</td>");
+                    out.println("<td>" + rs.getString(2) + "</td>");
+                    out.println("<td>" + rs.getFloat(3) + "</td>");
+                    out.println("</tr>");
+                }
+
+                out.println("</table>");
+            }
+
+            out.println("<br><a href='index.html'>Back</a>");
+
+        } catch (Exception e) {
+            out.println("Error: " + e);
+        }
+    }
+
+    public void destroy() {
+        try {
+            if (con != null) {
+                con.close();
+            }
+        } catch (Exception e) {}
+    }
+}
+
+
+web.xml : 
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <servlet>
+        <servlet-name>EmployeeCRUDServlet</servlet-name>
+        <servlet-class>EmployeeCRUDServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmployeeCRUDServlet</servlet-name>
+        <url-pattern>/EmployeeCRUDServlet</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
+
+
+Database Setup : 
+
+CREATE DATABASE company;
+
+USE company;
+
+CREATE TABLE employee (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    salary FLOAT
+);
+`
+    }
 ];

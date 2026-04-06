@@ -1,0 +1,35 @@
+
+            CREATE DATABASE webtechdb;
+USE webtechdb;
+
+-- STUDENT LOGIN TABLE
+CREATE TABLE exam_students (
+    regno VARCHAR(20) PRIMARY KEY,
+    name VARCHAR(50),
+    password VARCHAR(20)
+);
+
+INSERT INTO exam_students VALUES
+('101','Harsith','123'),
+('102','Arun','123');
+
+-- QUESTIONS TABLE
+CREATE TABLE questions (
+    qid INT PRIMARY KEY,
+    question TEXT,
+    option1 VARCHAR(100),
+    option2 VARCHAR(100),
+    option3 VARCHAR(100),
+    option4 VARCHAR(100),
+    answer VARCHAR(100)
+);
+
+INSERT INTO questions VALUES
+(1,'Capital of India?','Delhi','Mumbai','Chennai','Kolkata','Delhi'),
+(2,'2 + 2 = ?','3','4','5','6','4');
+
+-- RESULTS TABLE
+CREATE TABLE exam_results (
+    regno VARCHAR(20),
+    score INT
+);

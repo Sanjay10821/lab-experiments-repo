@@ -1,0 +1,23 @@
+
+▶️ WORKING STEPS (6A)
+Open MySQL Workbench
+Click SQL (+)
+Paste above SQL
+Click ⚡ Execute
+Verify:
+SELECT * FROM exam_students;
+SELECT * FROM questions;
+Place project in:
+Tomcat/webapps/OnlineExam
+Ensure:
+JSP files in root
+.class files in WEB-INF/classes
+web.xml inside WEB-INF
+Add MySQL connector → Tomcat/lib
+Start Tomcat:
+startup.bat
+Open:
+http://localhost:8080/OnlineExam/
+Login:
+101 / 123
+
