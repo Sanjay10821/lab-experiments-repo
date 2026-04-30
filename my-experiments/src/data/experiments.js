@@ -1,9 +1,9 @@
 export const experimentsData = [
-  {
-    id: 'exp-harish',
-    title: 'Harish Experiments',
-    image: '/south_india_map.png',
-    code: `Exp1
+    {
+        id: 'exp-harish',
+        title: ' Experiments- H',
+        image: '/south_india_map.png',
+        code: `Exp1
 <!DOCTYPE html>
 <html>
 <head>
@@ -1201,12 +1201,12 @@ CREATE TABLE employee (
     name VARCHAR(50),
     salary FLOAT
 );`
-  },
-  {
-    id: 'exp-anush',
-    title: 'Anush Experiments',
-    image: '/south_india_map.png',
-    code: `1 .  Image Map
+    },
+    {
+        id: 'exp-anush',
+        title: ' Experiments - A',
+        image: '/south_india_map.png',
+        code: `1 .  Image Map
 
 <!DOCTYPE html>
 <html lang="en">
@@ -3170,5 +3170,5 @@ Paste this into the tomcate/lib folder
 Go to classes of your project then 
 
 javac -cp ".;lib path\jakarta.servlet-api-6.0.0.jar" “*.java”`
-  }
+    }
 ];
